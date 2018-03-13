@@ -1,0 +1,37 @@
+<%= form_with(model: instrument_in_shop, local: true) do |form| %>
+  <% if instrument_in_shop.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(instrument_in_shop.errors.count, "error") %> prohibited this instrument_in_shop from being saved:</h2>
+
+      <ul>
+      <% instrument_in_shop.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label 'Дата поступления'%>
+    <%= form.text_field :date, id: :instrument_in_shop_date, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Поставщик' %>
+    <%= form.text_field :nameCompany, id: :instrument_in_shop_nameCompany, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Количество' %>
+    <%= form.number_field :collInstrument, id: :instrument_in_shop_collInstrument, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Общая стоимость' %>
+    <%= form.text_field :sumAll, id: :instrument_in_shop_sumAll, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit 'Добавить', class: 'btn btn-outline-dark' %>
+  </div>
+<% end %>

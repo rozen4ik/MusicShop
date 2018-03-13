@@ -1,0 +1,2 @@
+class InstrumentInShop < ApplicationRecord
+end

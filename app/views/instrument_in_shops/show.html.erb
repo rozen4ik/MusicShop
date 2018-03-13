@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Дата поступления:</strong>
+  <%= @instrument_in_shop.date %>
+</p>
+
+<p>
+  <strong>Поставщик:</strong>
+  <%= @instrument_in_shop.nameCompany %>
+</p>
+
+<p>
+  <strong>Количество:</strong>
+  <%= @instrument_in_shop.collInstrument %>
+</p>
+
+<p>
+  <strong>Общая стоимость:</strong>
+  <%= @instrument_in_shop.sumAll %>
+</p>
+
+<%= link_to 'Редактировать', edit_instrument_in_shop_path(@instrument_in_shop) %> |
+<%= link_to 'Назад', instrument_in_shops_path %>

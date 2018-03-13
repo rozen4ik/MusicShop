@@ -1,0 +1,32 @@
+<%= form_with(model: sell_instrument_for_customer, local: true) do |form| %>
+  <% if sell_instrument_for_customer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(sell_instrument_for_customer.errors.count, "error") %> prohibited this sell_instrument_for_customer from being saved:</h2>
+
+      <ul>
+      <% sell_instrument_for_customer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label 'Дата продажи' %>
+    <%= form.text_field :dateSell, id: :sell_instrument_for_customer_dateSell, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Количество' %>
+    <%= form.number_field :collInstrumentSell, id: :sell_instrument_for_customer_collInstrumentSell, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label 'Сумма' %>
+    <%= form.text_field :sum, id: :sell_instrument_for_customer_sum, class: 'form-control' %>
+  </div>
+
+  <div class="form-group">
+    <%= form.submit 'Добавить', class: 'btn btn-outline-dark' %>
+  </div>
+<% end %>

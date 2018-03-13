@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Сведения о поступлениях</h1>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Дата поступления</th>
+      <th scope="col">Поставщик</th>
+      <th scope="col">Количество</th>
+      <th scope="col">Общая стоимость</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instrument_in_shops.each do |instrument_in_shop| %>
+      <tr>
+        <td><%= instrument_in_shop.id %></td>
+        <td><%= instrument_in_shop.date %></td>
+        <td><%= instrument_in_shop.nameCompany %></td>
+        <td><%= instrument_in_shop.collInstrument %></td>
+        <td><%= instrument_in_shop.sumAll %></td>
+        <td><%= link_to 'Открыть', instrument_in_shop %></td>
+        <td><%= link_to 'Изменить', edit_instrument_in_shop_path(instrument_in_shop) %></td>
+        <td><%= link_to 'Удалить', instrument_in_shop, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Добавить новые сведения о поступлениях', new_instrument_in_shop_path %>

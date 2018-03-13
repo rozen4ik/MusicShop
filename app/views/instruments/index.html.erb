@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Инструменты</h1>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Название</th>
+      <th scope="col">Тип</th>
+      <th scope="col">Цена</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @instruments.each do |instrument| %>
+      <tr>
+        <td><%= instrument.id %></td>
+        <td><%= instrument.name %></td>
+        <td><%= instrument.type_name %></td>
+        <td><%= instrument.price %></td>
+        <td><%= link_to 'Открыть', instrument %></td>
+        <td><%= link_to 'Изменить', edit_instrument_path(instrument) %></td>
+        <td><%= link_to 'Удалить', instrument, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Добавить товар', new_instrument_path %>

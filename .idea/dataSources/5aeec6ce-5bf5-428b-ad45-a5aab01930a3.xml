@@ -1,0 +1,352 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="Rails MusicShop: development">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.7">
+    <root id="1"/>
+    <database id="2" parent="1" name="MusicShop_development">
+      <ObjectId>16652</ObjectId>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <database id="3" parent="1" name="postgres">
+      <ObjectId>12558</ObjectId>
+    </database>
+    <database id="4" parent="1" name="trucks_db">
+      <ObjectId>16521</ObjectId>
+    </database>
+    <database id="5" parent="1" name="TruckWebsite_development">
+      <ObjectId>16612</ObjectId>
+    </database>
+    <database id="6" parent="1" name="TruckWebsite_test">
+      <ObjectId>16613</ObjectId>
+    </database>
+    <database id="7" parent="1" name="MusicShop_test">
+      <ObjectId>16653</ObjectId>
+    </database>
+    <role id="8" parent="1" name="mikhailrozenberg">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <BypassRls>1</BypassRls>
+    </role>
+    <role id="9" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <schema id="14" parent="2" name="public">
+      <ObjectId>2200</ObjectId>
+      <IntrospectionTimestamp>2018-03-13.09:02:40.824</IntrospectionTimestamp>
+      <IntrospectionStateNumber>674</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="15" parent="2" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+    </schema>
+    <schema id="16" parent="2" name="pg_toast">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="17" parent="2" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+    </schema>
+    <schema id="18" parent="2" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+    </schema>
+    <schema id="19" parent="2" name="information_schema">
+      <ObjectId>12267</ObjectId>
+    </schema>
+    <sequence id="20" parent="14" name="instrument_in_shops_id_seq">
+      <ObjectId>16692</ObjectId>
+      <StateNumber>668</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="21" parent="14" name="instruments_id_seq">
+      <ObjectId>16670</ObjectId>
+      <StateNumber>666</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <sequence id="22" parent="14" name="sell_instrument_for_customers_id_seq">
+      <ObjectId>16681</ObjectId>
+      <StateNumber>667</StateNumber>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>bigint</DataType>
+    </sequence>
+    <table id="23" parent="14" name="ar_internal_metadata">
+      <ObjectId>16662</ObjectId>
+      <StateNumber>665</StateNumber>
+    </table>
+    <table id="24" parent="14" name="instrument_in_shops">
+      <ObjectId>16694</ObjectId>
+      <StateNumber>668</StateNumber>
+    </table>
+    <table id="25" parent="14" name="instruments">
+      <ObjectId>16672</ObjectId>
+      <StateNumber>666</StateNumber>
+    </table>
+    <table id="26" parent="14" name="schema_migrations">
+      <ObjectId>16654</ObjectId>
+      <StateNumber>664</StateNumber>
+    </table>
+    <table id="27" parent="14" name="sell_instrument_for_customers">
+      <ObjectId>16683</ObjectId>
+      <StateNumber>667</StateNumber>
+    </table>
+    <column id="28" parent="23" name="key">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>665</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="29" parent="23" name="value">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>665</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="30" parent="23" name="created_at">
+      <Position>3</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>665</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="31" parent="23" name="updated_at">
+      <Position>4</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>665</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="32" parent="23" name="ar_internal_metadata_pkey">
+      <ObjectId>16668</ObjectId>
+      <ColNames>key</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="33" parent="23" name="ar_internal_metadata_pkey">
+      <ObjectId>16669</ObjectId>
+      <ColNames>key</ColNames>
+      <UnderlyingIndexName>ar_internal_metadata_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="34" parent="24" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+      <DefaultExpression>nextval(&apos;instrument_in_shops_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>instrument_in_shops_id_seq</SequenceName>
+    </column>
+    <column id="35" parent="24" name="date">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>668</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="36" parent="24" name="numberDoc">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>668</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="37" parent="24" name="nameCompany">
+      <Position>4</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>668</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="38" parent="24" name="collInstrument">
+      <Position>5</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>668</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="39" parent="24" name="sumAll">
+      <Position>6</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>668</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="40" parent="24" name="created_at">
+      <Position>7</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="41" parent="24" name="updated_at">
+      <Position>8</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>668</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="42" parent="24" name="instrument_in_shops_pkey">
+      <ObjectId>16701</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="24" name="instrument_in_shops_pkey">
+      <ObjectId>16702</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>instrument_in_shops_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="44" parent="25" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>666</StateNumber>
+      <DefaultExpression>nextval(&apos;instruments_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>instruments_id_seq</SequenceName>
+    </column>
+    <column id="45" parent="25" name="name">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>666</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="46" parent="25" name="type_name">
+      <Position>3</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>674</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="47" parent="25" name="price">
+      <Position>4</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>666</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="48" parent="25" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>666</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="49" parent="25" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>666</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="50" parent="25" name="instruments_pkey">
+      <ObjectId>16679</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="51" parent="25" name="instruments_pkey">
+      <ObjectId>16680</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>instruments_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="52" parent="26" name="version">
+      <Position>1</Position>
+      <DataType>varchar|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>664</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="53" parent="26" name="schema_migrations_pkey">
+      <ObjectId>16660</ObjectId>
+      <ColNames>version</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="54" parent="26" name="schema_migrations_pkey">
+      <ObjectId>16661</ObjectId>
+      <ColNames>version</ColNames>
+      <UnderlyingIndexName>schema_migrations_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="55" parent="27" name="id">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>667</StateNumber>
+      <DefaultExpression>nextval(&apos;sell_instrument_for_customers_id_seq&apos;::regclass)</DefaultExpression>
+      <TypeId>20</TypeId>
+      <SequenceName>sell_instrument_for_customers_id_seq</SequenceName>
+    </column>
+    <column id="56" parent="27" name="dateSell">
+      <Position>2</Position>
+      <DataType>varchar|0</DataType>
+      <StateNumber>667</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="57" parent="27" name="collInstrumentSell">
+      <Position>3</Position>
+      <DataType>integer|0</DataType>
+      <StateNumber>667</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="58" parent="27" name="sum">
+      <Position>4</Position>
+      <DataType>double precision|0</DataType>
+      <StateNumber>667</StateNumber>
+      <TypeId>701</TypeId>
+    </column>
+    <column id="59" parent="27" name="created_at">
+      <Position>5</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>667</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="60" parent="27" name="updated_at">
+      <Position>6</Position>
+      <DataType>timestamp|0</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>667</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="61" parent="27" name="sell_instrument_for_customers_pkey">
+      <ObjectId>16690</ObjectId>
+      <ColNames>id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="27" name="sell_instrument_for_customers_pkey">
+      <ObjectId>16691</ObjectId>
+      <ColNames>id</ColNames>
+      <UnderlyingIndexName>sell_instrument_for_customers_pkey</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

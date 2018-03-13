@@ -1,0 +1,2 @@
+class SellInstrumentForCustomer < ApplicationRecord
+end

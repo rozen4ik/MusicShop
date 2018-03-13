@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Сведения о продажах</h1>
+
+<table class="table table-bordered">
+  <thead class="thead-light">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Дата продажи</th>
+      <th scope="col">Количество</th>
+      <th scope="col">Сумма продажи</th>
+      <th scope="col" colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sell_instrument_for_customers.each do |sell_instrument_for_customer| %>
+      <tr>
+        <td><%= sell_instrument_for_customer.id %></td>
+        <td><%= sell_instrument_for_customer.dateSell %></td>
+        <td><%= sell_instrument_for_customer.collInstrumentSell %></td>
+        <td><%= sell_instrument_for_customer.sum %></td>
+        <td><%= link_to 'Открыть', sell_instrument_for_customer %></td>
+        <td><%= link_to 'Редактировать', edit_sell_instrument_for_customer_path(sell_instrument_for_customer) %></td>
+        <td><%= link_to 'Удалить', sell_instrument_for_customer, method: :delete, data: { confirm: 'Вы уверены?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Добавить новые сведения о продажах', new_sell_instrument_for_customer_path %>

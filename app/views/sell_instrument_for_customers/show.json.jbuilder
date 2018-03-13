@@ -1,0 +1,1 @@
+json.partial! "sell_instrument_for_customers/sell_instrument_for_customer", sell_instrument_for_customer: @sell_instrument_for_customer

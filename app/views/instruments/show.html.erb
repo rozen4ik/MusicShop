@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Название:</strong>
+  <%= @instrument.name %>
+</p>
+
+<p>
+  <strong>Тип:</strong>
+  <%= @instrument.type_name %>
+</p>
+
+<p>
+  <strong>Цена:</strong>
+  <%= @instrument.price %>
+</p>
+
+<%= link_to 'Редактировать', edit_instrument_path(@instrument) %> |
+<%= link_to 'Назад', instruments_path %>

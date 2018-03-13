@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Дата продажи:</strong>
+  <%= @sell_instrument_for_customer.dateSell %>
+</p>
+
+<p>
+  <strong>Количество:</strong>
+  <%= @sell_instrument_for_customer.collInstrumentSell %>
+</p>
+
+<p>
+  <strong>Сумма:</strong>
+  <%= @sell_instrument_for_customer.sum %>
+</p>
+
+<%= link_to 'Редактировать', edit_sell_instrument_for_customer_path(@sell_instrument_for_customer) %> |
+<%= link_to 'Назад', sell_instrument_for_customers_path %>
